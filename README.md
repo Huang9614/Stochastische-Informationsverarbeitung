@@ -17,8 +17,8 @@
   - P(y_3) = sigma_x3 B(x3,y3) * ξ3(x3)
 - 在实际预测中，假设目前在第m步，要预测第k步的状态量的分布
   - 从m+1步开始，仅有控制信号的更新，无测量信号的情况下，如何预测系统状态
-  - ξ_k\1:m = A^T * ξ_k-1|1:m -> one-step transition matrix A^T -> one-step prediction
-  - ξ_m+K\1:m = (A^K)^T * ξ_m|1:m -> K-step transition matrix -> K-step prediction
+  - ξ_k|1:m = A^T * ξ_k-1|1:m -> one-step transition matrix A^T -> one-step prediction
+  - ξ_m+K|1:m = (A^K)^T * ξ_m|1:m -> K-step transition matrix -> K-step prediction
 
 ## 滤波
 - 假设目前在第k步，为了能够滤波，应该也有k个测量以及k-1个控制信号
