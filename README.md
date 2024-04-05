@@ -23,7 +23,7 @@
 ## 滤波
 - 假设目前在第k步，为了能够滤波，应该也有k个测量以及k-1个控制信号
 - Idea：在有了y1:k-1 和 u0:k-1 的基础上，进行了one-step prediction，得到了（Prior） P(xk = i|y1:k-1,u0:k-1)；现在，又有了新的测量信号（Likelihood） yk = j：P(yk = j|xk = i)，从而可以得到滤波后的状态分布（Posterior）：P(xk = i|y1:k, u0:k-1)；也就是说，当我们在 xk = i 的基础上，测量得到了值为 j 的yk时，我们可以更新 xk = i 的概率； yk = j 是来自于测量， 而xk = i是来自于上一步；当我们想要更新 xk 时，就得对其可取的所有数值都进行更新，也就是如果有N个值，那么我们只要做N次测量，得到 P(yk = j | xk = 1) ... P(yk = j | xk = N)，而所有的j都取决于当时所在的状态 xk的取值，以及测量矩阵，因此，yk的取值是随机的，不需要loop over yk的所有可选值
-  - 'Q: '是否需要作N次测量？ Wann kann man mit 1D-Messung auch auf einen 3D-Zustand schliessen? 
+  - `Q: `是否需要作N次测量？ Wann kann man mit 1D-Messung auch auf einen 3D-Zustand schliessen? 
 - 
 
 
